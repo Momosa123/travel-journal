@@ -6,15 +6,7 @@ export default function TravelApp() {
   const destinations = data.map((destination) => {
     return (
       <div>
-        <Location
-          title={destination.title}
-          startDate={destination.startDate}
-          endDate={destination.endDate}
-          description={destination.description}
-          maps={destination.googleMapsUrl}
-          imageUrl={destination.imageUrl}
-          location={destination.location}
-        />
+        <Location key={destination.id} destination={destination} />
       </div>
     );
   });
